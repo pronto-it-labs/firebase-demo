@@ -1,0 +1,12 @@
+# Eclipse
+.classpath
+.project
+.settings/
+uploaded/
+
+# Maven
+log/
+target/
+appfog/
+bin
+src/main/webapp/dist/
