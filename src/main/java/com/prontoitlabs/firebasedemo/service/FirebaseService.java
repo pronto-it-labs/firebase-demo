@@ -26,6 +26,8 @@ public class FirebaseService {
     data.put("firstName", "John");
     data.put("lastName", "Doe");
     data.put("description", "has sent you friend request!");
+    data.put("read", "false");
+    data.put("imgSrc", "../../img/john.jpg");
     data.put("date", DateUtil.now().getTime());
     String url = FIREBASE_URL + NOTIFICATIONS + FIRST_USER;
     FirebaseUtil.writeToList(url, data);
@@ -37,6 +39,8 @@ public class FirebaseService {
     data.put("firstName", "Jane");
     data.put("lastName", "Doe");
     data.put("description", "has sent you friend request!");
+    data.put("read", "false");
+    data.put("imgSrc", "../../img/jane.jpg");
     data.put("date", DateUtil.now().getTime());
     String url = FIREBASE_URL + NOTIFICATIONS + SECOND_USER;
     FirebaseUtil.writeToList(url, data);

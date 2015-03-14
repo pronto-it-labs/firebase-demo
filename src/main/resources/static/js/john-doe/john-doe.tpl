@@ -8,21 +8,37 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="ion-ios-bell noti-icon">
          <div ng-if="(notifications | orderByPriority | filter:{read: false}).length > 0" class="ng-class:(notifications | orderByPriority | filter:{read: false}).length > 0 ? 'unread-notifications style-notification': ''">{{(notifications | orderByPriority | filter:{read: false}).length}}</div>
        </i> </a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu menu-override">
           <li class="noti-num noti-style">You have {{(notifications | orderByPriority | filter:{read: false}).length}} notifications</li>
-          <li ng-repeat="notification in notifications | orderByPriority " class="noti-style">
-            <div class="col-xs-2">
-              <img ng-show="notification.postedByPic" ng-src="http://{{notification.postedByPic}}" width="45px"> <i class="fa fa-user-md no-profilepic-font-reply" ng-show="notification.postedByPic == '' || notification.postedByPic === null"></i> </div>
-            <div class="col-xs-10 padl-xs-24">
+          <li ng-repeat="notification in notifications | orderByPriority " class="noti-style block-fix noti-parent">
+          <div ui-sref="home.jane-doe">
+            <div style="float:left;width:20%;">
+              <img ng-src="{{notification.imgSrc}}" width="45px" style="border-radius: 100%;"> </div>
+            <div style="float:left;width:80%;">
               <span>
-                <strong>{{notification.firstName}}</strong>&nbsp;{{notification.lastName}} </span>
+                <strong>{{notification.firstName}}&nbsp;{{notification.lastName}}</strong>&nbsp;{{notification.description}} </span>
+            </div>
             </div>
           </li>
         </ul>
       </li>
     </div>
   </div>
-  <button ng-click="pushNotificationtoJohnDoe()" class="btn btn-info">Generate Notification</button>
+  <div>Some text here.</div>
+  <div class="profile-container">
+    <div class="img-container">
+      <img style="border-radius: 100%;margin: 0px 5px;" src="../../img/jane.jpg"> </div>
+    <div class="user-info-container">
+      <div ui-sref="home.jane-doe">
+        <h3>Jane Doe</h3>
+      </div>
+      <div>@jane-doe</div>
+      <div class="label label-info">Designer</div>
+    </div>
+    <div class="btn-container">
+      <button ng-click="pushNotificationtoJohnDoe()" class="btn btn-success btn-add"><i class="ion-person-add"></i> Add Friend</button>
+    </div>
+  </div>
   <!--   <div>
     <div class="label label-success">
       <label>Check Jane Doe Screen</label>
