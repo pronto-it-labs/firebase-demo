@@ -1,7 +1,7 @@
 <div class="container text-center alert alert-info alert-dismissable">
   <div>
     <div class="">
-      <label>Currently viewing User-A's Screen</label>
+      <label>Currently viewing John Doe's Screen</label>
       </i>
       <li class="menu-list-notifications list-style-none dropdown ng-class: (notifications | orderByPriority | filter:{read: false}).length > 0 ? 'unread-notifications': ''">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="ion-ios-bell">
@@ -21,10 +21,10 @@
       </li>
     </div>
   </div>
-  <button ng-click="pushNotificationtoA()" class="btn btn-info">Generate Notification</button>
+  <button ng-click="pushNotificationtoJohnDoe()" class="btn btn-info">Generate Notification</button>
   <div>
     <div class="label label-success">
-      <label>Check User-B Screen</label>
+      <label>Check Jane Doe Screen</label>
     </div>
   </div>
 </div>

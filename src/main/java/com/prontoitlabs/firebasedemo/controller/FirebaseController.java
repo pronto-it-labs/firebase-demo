@@ -13,24 +13,24 @@ import com.prontoitlabs.firebasedemo.service.FirebaseService;
 @RequestMapping("/user")
 public class FirebaseController {
 
-	@Resource
-	private FirebaseService firebaseService;
+  @Resource
+  private FirebaseService firebaseService;
 
-	@RequestMapping(value = "/create-notification", method = RequestMethod.GET)
-	@ResponseBody
-	public void createNotification() {
-		firebaseService.pushToFirebase();
-	}
+  /**
+   * This method is used to create notification in Jane Doe's Screen.
+   */
+  @RequestMapping(value = "/create-notification-for-john-doe/", method = RequestMethod.POST)
+  @ResponseBody
+  public void createNotificationForJaneDoe() {
+    firebaseService.pushNotificationtoJaneDoe();
+  }
 
-	@RequestMapping(value = "/create-notification-a/", method = RequestMethod.POST)
-	@ResponseBody
-	public void createNotificationForUserA() {
-		firebaseService.pushNotificationtoA();
-	}
-
-	@RequestMapping(value = "/create-notification-b/", method = RequestMethod.POST)
-	@ResponseBody
-	public void createNotificationForUserB() {
-		firebaseService.pushNotificationtoB();
-	}
+  /**
+   * This method is used to create notification in John Doe's Screen.
+   */
+  @RequestMapping(value = "/create-notification-for-jane-doe/", method = RequestMethod.POST)
+  @ResponseBody
+  public void createNotificationForJohnDoe() {
+    firebaseService.pushNotificationtoJohnDoe();
+  }
 }

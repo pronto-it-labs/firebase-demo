@@ -11,50 +11,34 @@ import com.prontoitlabs.firebasedemo.util.FirebaseUtil;
 @Service
 public class FirebaseService {
 
-	private static final String FIREBASE_URL = "https://shining-heat-1420.firebaseio.com";
+  private static final String FIREBASE_URL = "https://shining-heat-1420.firebaseio.com";
 
-	private static final String NOTIFICATIONS = "/notifications/";
+  private static final String NOTIFICATIONS = "/notifications/";
 
-	private static final int A_USERID = 1;
+  private static final String FIRST_USER = "john-doe";
 
-	private static final int B_USERID = 2;
+  private static final String SECOND_USER = "jane-doe";
 
-	public void pushToFirebase() {
-		Map<String, Object> data = new LinkedHashMap<>();
 
-		data.put("firstName", "Firebase");
-		data.put("lastName", "User");
-		data.put("read", "false");
-		data.put("description",
-				"You have created a notification and Its amazing!");
-		data.put("date", DateUtil.now().getTime());
-		String url = FIREBASE_URL + NOTIFICATIONS;
-		FirebaseUtil.writeToList(url, data);
-	}
+  public void pushNotificationtoJaneDoe() {
+    Map<String, Object> data = new LinkedHashMap<>();
 
-	public void pushNotificationtoA() {
-		Map<String, Object> data = new LinkedHashMap<>();
+    data.put("firstName", "John");
+    data.put("lastName", "Doe");
+    data.put("description", "has sent you friend request!");
+    data.put("date", DateUtil.now().getTime());
+    String url = FIREBASE_URL + NOTIFICATIONS + FIRST_USER;
+    FirebaseUtil.writeToList(url, data);
+  }
 
-		data.put("firstName", "Firebase");
-		data.put("lastName", "UserA");
-		data.put("read", "false");
-		data.put("description",
-				"You have created a notification and Its amazing!");
-		data.put("date", DateUtil.now().getTime());
-		String url = FIREBASE_URL + NOTIFICATIONS + A_USERID;
-		FirebaseUtil.writeToList(url, data);
-	}
+  public void pushNotificationtoJohnDoe() {
+    Map<String, Object> data = new LinkedHashMap<>();
 
-	public void pushNotificationtoB() {
-		Map<String, Object> data = new LinkedHashMap<>();
-
-		data.put("firstName", "Firebase");
-		data.put("lastName", "UserB");
-		data.put("read", "false");
-		data.put("description",
-				"You have created a notification and Its amazing!");
-		data.put("date", DateUtil.now().getTime());
-		String url = FIREBASE_URL + NOTIFICATIONS + B_USERID;
-		FirebaseUtil.writeToList(url, data);
-	}
+    data.put("firstName", "Jane");
+    data.put("lastName", "Doe");
+    data.put("description", "has sent you friend request!");
+    data.put("date", DateUtil.now().getTime());
+    String url = FIREBASE_URL + NOTIFICATIONS + SECOND_USER;
+    FirebaseUtil.writeToList(url, data);
+  }
 }

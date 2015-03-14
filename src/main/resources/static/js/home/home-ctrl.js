@@ -1,4 +1,4 @@
-angular.module('home', [ 'home.user-a', 'home.user-b' ]).config(
+angular.module('home', [ 'home.john-doe', 'home.jane-doe' ]).config(
 		function($stateProvider) {
 			$stateProvider.state('home', {
 				url : '/home',
