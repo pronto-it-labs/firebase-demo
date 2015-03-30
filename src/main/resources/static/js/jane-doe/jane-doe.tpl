@@ -39,7 +39,7 @@
       </li>
     </div>
   </div>
-  <div>Some text here.</div>
+  <div>Click <i class="ion-person-add"></i> Add Friend to generate the notification and review it on John Doe's profile. </div>
   <div class="profile-container">
     <div class="img-container">
       <img style="border-radius: 100%;margin: 0px 5px;" src="../../img/john.jpg"> </div>

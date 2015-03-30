@@ -1,6 +1,6 @@
 <div>
   <label>
-    <h3>Some text here!!</h3>
+    <h3>Click one of the user to View the profile!!</h3>
   </label>
 </div>
 <div>

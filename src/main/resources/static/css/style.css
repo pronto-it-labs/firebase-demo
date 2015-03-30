@@ -82,7 +82,7 @@ li.menu-list-notifications a.notification-list {
 
 .noti-parent:hover {
 	background-color: rgb(217, 237, 247);
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .noti-num {
