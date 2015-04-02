@@ -1,5 +1,5 @@
 # firebase-demo
-After the successfull set up and complilation of the project you can follow the below attached snapshots. 
+After the successful set up and complilation of the project you can follow the below attached snapshots. 
 
 <img src="http://res.cloudinary.com/dpldxiywo/image/upload/r_0/v1427964844/1firebasenew_gf7b90.png"/>
 
