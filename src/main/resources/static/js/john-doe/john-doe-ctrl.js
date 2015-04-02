@@ -5,7 +5,7 @@ angular.module( 'home.john-doe', [] ).config( function( $stateProvider ) {
     controller: 'JohnDoeCtrl'
   } );
 } ).controller( 'JohnDoeCtrl', function( $scope, JohnDoeUserService, $firebase ) {
-  var URL = "https://shining-heat-1420.firebaseio.com" + "/notifications/" + "jane-doe" + "/data/";
+  var URL = "your-firebase-url-comes-here" + "/notifications/" + "jane-doe" + "/data/";
   var ref = new Firebase( URL );
   $scope.notifications = $firebase( ref );
   console.log( "$scope.notifications", $scope.notifications );

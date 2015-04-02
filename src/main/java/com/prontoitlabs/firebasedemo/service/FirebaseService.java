@@ -11,7 +11,7 @@ import com.prontoitlabs.firebasedemo.util.FirebaseUtil;
 @Service
 public class FirebaseService {
 
-  private static final String FIREBASE_URL = "https://shining-heat-1420.firebaseio.com";
+  private static final String FIREBASE_URL = "your-firebase-url-comes-here";
 
   private static final String NOTIFICATIONS = "/notifications/";
 
